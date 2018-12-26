@@ -184,7 +184,9 @@ input, select, textarea {
 			text-decoration: none;
 			border-bottom-color: transparent;
 		}
-
+    .aspecial {
+        border-style : none;
+    }
 	strong, b {
 		font-weight: 600;
 		color: #000000;
@@ -2843,6 +2845,9 @@ input, select, textarea {
 			position: relative;
 			width: 3rem;
 		}
+        a.arrow:hover {
+            opacity: .3;
+        }
 
 /* Gallery */
 
