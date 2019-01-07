@@ -1877,7 +1877,7 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
-		white-space: nowrap;
+/*		white-space: nowrap;*/
 	}
 
 		input[type="submit"]:hover,
@@ -2001,9 +2001,11 @@ input, select, textarea {
 				input[type="button"].large,
 				button.large,
 				.button.large {
-					font-size: 0.8rem;
+					font-size: 0.4rem;
+/*
 					height: 3.75rem;
 					line-height: 3.75rem;
+*/
 				}
 
 				input[type="submit"].small,
