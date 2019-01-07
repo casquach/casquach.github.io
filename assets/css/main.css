@@ -1984,7 +1984,7 @@ input, select, textarea {
 				background-color: #9791AB;
 			}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 527px) {
 
 			input[type="submit"],
 			input[type="reset"],
