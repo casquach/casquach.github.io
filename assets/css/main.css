@@ -3944,3 +3944,9 @@ input, select, textarea {
     margin: 0;
     font-size: 15px;
 }
+
+@media screen and (max-width: 527px) {
+    
+    .panel p {
+        font-size: 12px;
+}
