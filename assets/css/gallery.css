@@ -20,6 +20,10 @@
   border: 1px solid #858096;
 }
 
+img.gallery__img:hover {
+    opacity:.5;
+}
+
 .gallery__item--1 {
   grid-column: 1 / span 9;
   grid-row: 1 / span 2;
