@@ -1,0 +1,67 @@
+/*
+body {
+    margin: 30px;
+}
+*/
+
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #858096;
+}
+
+/* Navbar links */
+#navbar a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+section {
+  padding: 25px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.navButton {
+        border-style:none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		-webkit-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		-ms-transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+		background-color: transparent;
+		color: #000000 !important;
+		cursor: pointer;
+		display: inline-block;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.8rem;
+		font-weight: 600;
+		height: 3rem;
+		letter-spacing: 0.175em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+/*		white-space: nowrap;*/
+}
+
+.navButton:hover {
+    opacity: .5;
+}
