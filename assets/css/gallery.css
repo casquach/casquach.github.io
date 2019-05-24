@@ -8,7 +8,7 @@
   grid-template-columns: repeat(15, 1fr);
 /*  grid-template-rows: repeat(, 10vw);*/
 /*  grid-gap: 1rem; */
-  border: 1px solid #858096;
+  border: 1px solid #253237;
 /*  margin-left: 20px;*/
 }
 
@@ -17,7 +17,7 @@
   height: 100%;
   object-fit: cover;
   display: block; 
-  border: 1px solid #858096;
+  border: 1px solid #253237;
 }
 
 img.gallery__img:hover {
