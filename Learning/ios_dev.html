@@ -89,8 +89,40 @@ override func viewDidAppear(_ animated: Bool) {
 									<hr />
 								
 							</section>
-
-							
+                            
+<!--                            --------------------------------------------------------------------------------->
+							<section>
+                                <header><h2>Downloading Web Content</h2></header>
+                                <p>I created an application that downloads content from the web.</p>
+                                <h3>Using WebKit View</h3>
+                                <p>You must import WebKit in order to use a WKWebView. You can assign a variable to the method URL() and pass it a string url.</p>
+                                <pre><code>@IBOutlet weak var webview: WKWebView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        if let myurl = URL(string: "https://cassiequach.com") {
+        
+//        webview.load(URLRequest(url: myurl))
+            let request = NSMutableURLRequest(url: myurl)
+            
+            let task = URLSession.shared.dataTask(with: request as URLRequest) {
+                data, response, error in
+                
+                if let error = error {
+                    print(error)
+                } else {
+                    if let unwrappedData = data {
+                        let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
+                        print(dataString ?? "")
+                    }
+                }
+            } //happens at same time as task.resume() below
+            task.resume()
+            
+        }
+    }</code></pre>
+                                
+                            </section>
 					</section>
                         
                 </div>
