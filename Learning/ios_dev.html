@@ -27,9 +27,71 @@
 							<ul class="actions">
 								<li><a href="#" class="button primary large">Get Started</a></li>
 								<li><a href="#" class="button large">Learn More</a></li>
-							</ul>
--->
-					
+							</ul> -->
+                 <section>
+                        <header><h2>Frame Animation App</h2></header>
+                        
+                    <div style="width:image width px; font-size:80%; text-align:center;"><div>
+                        <img src="../images/Learning/ios/Simulator%20Screen%20Shot%20-%20iPhone%20X%CA%80%20-%201.png" alt="" style="width:15%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />
+                        <img src="../images/Learning/ios/Simulator%20Screen%20Shot%20-%20iPhone%20X%CA%80%20-%202.png" alt="" style="width:15.16%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />
+                        <img src="../images/Learning/ios/Simulator%20Screen%20Shot%20-%20iPhone%20X%CA%80%20-%203.png" alt="" style="width:15.28%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />
+                        <img src="../images/Learning/ios/Simulator%20Screen%20Shot%20-%20iPhone%20X%CA%80%20-%204.png" alt="" style="width:15.28%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />
+                        <img src="../images/Learning/ios/animation.gif" alt="" style="width:12%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />
+                        </div>Screenshots from Xcode</div>
+                    <hr />
+                </section>
+                        
+                <section>
+                        <header><h2>What's The Weather App</h2></header>
+                        
+                    <div style="width:image width px; font-size:80%; text-align:center;"><div>
+                        <img src="../images/Learning/ios/weatherapp1.png" alt="" style="width:15%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />
+                        <img src="../images/Learning/ios/weatherapp2.png" alt="" style="width:15.16%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />
+                        <img src="../images/Learning/ios/weatherapp3.png" alt="" style="width:15.28%; display: inline-block; margin-left: auto; margin-right: auto; margin-bottom: 10px" /></div>Screenshots from Xcode</div>
+                    <hr />
+                </section>
+                              
+                <section>
+                        <header><h2>Manipulating Strings Playground</h2></header>
+
+                        <div style="width:image width px; font-size:80%; text-align:center;"><img src="../images/Learning/ios/WorkingWithStrings.png" alt="" style="width:80%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 10px" />Screenshotted from Xcode</div>
+                        <hr />
+                </section>
+				<section>
+                                <header><h2>Downloading Web Content</h2></header>
+                                <p>I created an application that downloads content from the web like the html of the webpage following a tutorial within an ios course I purchased on <a href="https://www.udemy.com/complete-ios-11-developer-course/">Udemy</a>.</p>
+                                <h3>Using WebKit View</h3>
+                                <p>You must import WebKit in order to use a WKWebView. You can assign a variable to the method URL() and pass it a string url. Below is a snippet of code showing how to retrieve the html code from a website. It is also an example of asynchronous or multithreaded programming which is good for setting up the user interface or displaying a loading message for the user while waiting for the data to come back.</p>
+                                <pre><code>@IBOutlet weak var webview: WKWebView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        if let myurl = URL(string: "https://cassiequach.com") {
+        
+//        webview.load(URLRequest(url: myurl)) //this loads the webpage the url points to into the webview
+            let request = NSMutableURLRequest(url: myurl)
+            
+            let task = URLSession.shared.dataTask(with: request as URLRequest) {
+                data, response, error in
+                
+                if let error = error {
+                    print(error)
+                } else {
+                    if let unwrappedData = data {
+                        let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
+                        print(dataString ?? "")
+                    }
+                }
+            } //happens at same time as task.resume() below
+            task.resume()
+            
+        }
+    }</code></pre>
+                                
+                            </section>
+                        
+    <!----------------------------------------------------------------------------------------------------->
+
         
 					<section>
 						<header>
@@ -91,38 +153,7 @@ override func viewDidAppear(_ animated: Bool) {
 							</section>
                             
 <!--                            --------------------------------------------------------------------------------->
-							<section>
-                                <header><h2>Downloading Web Content</h2></header>
-                                <p>I created an application that downloads content from the web.</p>
-                                <h3>Using WebKit View</h3>
-                                <p>You must import WebKit in order to use a WKWebView. You can assign a variable to the method URL() and pass it a string url.</p>
-                                <pre><code>@IBOutlet weak var webview: WKWebView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        if let myurl = URL(string: "https://cassiequach.com") {
-        
-//        webview.load(URLRequest(url: myurl))
-            let request = NSMutableURLRequest(url: myurl)
-            
-            let task = URLSession.shared.dataTask(with: request as URLRequest) {
-                data, response, error in
-                
-                if let error = error {
-                    print(error)
-                } else {
-                    if let unwrappedData = data {
-                        let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
-                        print(dataString ?? "")
-                    }
-                }
-            } //happens at same time as task.resume() below
-            task.resume()
-            
-        }
-    }</code></pre>
-                                
-                            </section>
+
 					</section>
                         
                 </div>
