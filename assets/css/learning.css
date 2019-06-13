@@ -59,3 +59,15 @@ body {
 .navButton:hover {
     opacity: .5;
 }
+
+.header img {
+  float: right;
+  width: 140px;
+/*  height: 140px;*/
+  margin-left: 10px;
+}
+
+.header h2 {
+  position: relative;
+  top: 18px;
+}
