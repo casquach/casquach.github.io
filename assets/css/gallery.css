@@ -6,10 +6,7 @@
 .gallery1 {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-/*  grid-template-rows: repeat(, 10vw);*/
-/*  grid-gap: 1rem; */
   border: 1px solid #253237;
-/*  margin-left: 20px;*/
 }
 
 .gallery__img {
