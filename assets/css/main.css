@@ -266,7 +266,12 @@ input, select, textarea {
 	}
 
 	h3 {
-		font-size: 0.875rem;
+		font-size: calc(10px + 44 * ((100vw - 768px) / 1152));
+		font-family: 'Roboto Flex', sans-serif;
+		font-weight: 600;
+		font-stretch: 120%;
+		line-height: 80%;
+		margin: 2rem 0 2rem 0;
 	}
 
 	h4 {
@@ -3016,6 +3021,7 @@ input, select, textarea {
 
             a .resume:hover {
                 opacity: .5;
+				/* clip-path: circle(); */
             }
 
 			.gallery {
@@ -3306,16 +3312,18 @@ input, select, textarea {
 		#wrapperThree section {
 			display: grid;
 			grid-template-areas: "content1 content2 content3";
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: repeat(3, 33vw);
 			grid-template-rows: 1fr;
-			margin: 5.0rem 0 0 0;
+			margin: 5.0rem 0px;
 
 		}
 
 			#wrapperThree section > .content1 {
 				grid-area: content1;
-				justify-self: end;
+				max-width: 100%;
+				position: relative;
 				padding: 0 5rem;
+				align-self: center;
 			}
 
 				#wrapperThree section > .content1 h2 {
@@ -3336,15 +3344,15 @@ input, select, textarea {
 
 			#wrapperThree section > .content2 {
 				grid-area: content2;
-				max-width: 60rem;
+				max-width: 100%;
 				position: relative;
 				padding: 0 5rem;
 			}
 
 			#wrapperThree section > .content3 {
 				grid-area: content3;
-				max-width: 60rem;
-				position: relative;
+				max-width: 100%;
+				position: absolute;
 				padding: 0 5rem;
 			}
 
