@@ -2645,7 +2645,7 @@ input, select, textarea {
 
 	ul.actions {
 		display: -moz-flex;
-		display: -webkit-flex;
+		/* display: -webkit-flex; */
 		display: -ms-flex;
 		display: flex;
 		cursor: default;
@@ -2672,13 +2672,13 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
-		ul.actions.stacked {
+		/* ul.actions.stacked {
 			-moz-flex-direction: column;
 			-webkit-flex-direction: column;
 			-ms-flex-direction: column;
 			flex-direction: column;
 			margin-left: 0;
-		}
+		} */
 
 			ul.actions.stacked li {
 				padding: 1.3rem 0 0 0;
@@ -2688,11 +2688,11 @@ input, select, textarea {
 					padding-top: 0;
 				}
 
-		ul.actions.fit {
+		/* ul.actions.fit {
 			width: calc(100% + 1rem);
-		}
+		} */
 
-			ul.actions.fit li {
+			/* ul.actions.fit li {
 				-moz-flex-grow: 1;
 				-webkit-flex-grow: 1;
 				-ms-flex-grow: 1;
@@ -2702,26 +2702,26 @@ input, select, textarea {
 				-ms-flex-shrink: 1;
 				flex-shrink: 1;
 				width: 100%;
-			}
+			} */
 
-				ul.actions.fit li > * {
+				/* ul.actions.fit li > * {
 					width: 100%;
-				}
+				} */
 
-			ul.actions.fit.stacked {
+			/* ul.actions.fit.stacked {
 				width: 100%;
-			}
+			} */
 
 		@media screen and (max-width: 480px) {
 
-			ul.actions:not(.fixed) {
+			/* ul.actions:not(.fixed) {
 				-moz-flex-direction: column;
 				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
 				flex-direction: column;
 				margin-left: 0;
 				width: 100% !important;
-			}
+			} */
 
 				ul.actions:not(.fixed) li {
 					-moz-flex-grow: 1;
@@ -2903,9 +2903,10 @@ input, select, textarea {
 	a.arrowup {
 		border-bottom: 0;
 /*		display: inline-block;*/
-		height: 4rem;
+		/* height: 4rem; */
 		position: relative;
 /*		width: 6rem;*/
+		vertical-align: middle;
 	}
 
 		a.arrowup .label {
@@ -2919,7 +2920,7 @@ input, select, textarea {
 			background-size: contain;
 			content: '';
 			display: inline-block;
-			height: 100%;
+			height: 1.5rem;
 			position: relative;
 			width: 3rem;
             transform: scaleY(-1);
@@ -3408,10 +3409,6 @@ input, select, textarea {
 				text-align: right;
 			}
 
-				#wrapper section > footer ul.actions {
-					justify-content: flex-end;
-				}
-
 		#wrapper > section {
 			position: relative;
 		}
@@ -3691,10 +3688,6 @@ input, select, textarea {
 						padding: 0;
 						text-align: left;
 					}
-
-						#wrapper section > footer ul.actions {
-							justify-content: flex-start;
-						}
 
 				#wrapper > section {
 					margin: 0;
