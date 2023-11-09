@@ -2574,10 +2574,6 @@ input, select, textarea {
 		padding-left: 1rem;
 	}
 
-		ul li {
-			padding-left: 0.325rem;
-		}
-
 		ul.alt {
 			list-style: none;
 			padding-left: 0;
@@ -2651,11 +2647,11 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		margin-left: -1rem;
-		padding-left: 0;
+		/* padding-left: 0; */
 	}
 
 		ul.actions li {
-			padding: 0 0 0 1rem;
+			/* padding: 0 0 0 1rem; */
 			vertical-align: middle;
 		}
 
