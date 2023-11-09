@@ -2570,7 +2570,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2rem 2rem;
+		/* margin: 0 0 2rem 2rem; */
 		padding-left: 1rem;
 	}
 
@@ -2596,6 +2596,7 @@ input, select, textarea {
 		ul.items {
 			list-style: none;
 			padding-left: 0;
+			margin: 0 0 2rem 2rem;
 		}
 
 			ul.items > li {
@@ -3306,21 +3307,43 @@ input, select, textarea {
 		/* padding: 0 0 10rem 0; */
 	}
 
-		#wrapperThree section {
-			display: grid;
+		#wrapperThree {
+			/* display: grid;
 			grid-template-areas: "content1 content2 content3";
 			grid-template-columns: repeat(3, 33vw);
-			grid-template-rows: 1fr;
-			margin: 5.0rem 0px;
-
+			grid-template-rows: 1fr; */
+			margin: 5.0rem 0px; 
+			padding-left: max(4.1666666667vw,32px);
+			padding-right: max(4.1666666667vw,32px);
+			margin-left: auto;
+    		margin-right: auto;
+			max-width: 1980px;
+			gap: max(4.1666666667vw,32px);
+			display: flex;
+			/* flex-wrap: wrap;
+			position: relative; */
 		}
 
-			#wrapperThree section > .content1 {
-				grid-area: content1;
+			#wrapperThree > .content {
+				/* grid-area: content1;
 				max-width: 100%;
 				position: relative;
 				padding: 0 5rem;
-				align-self: center;
+				align-self: center; */
+				translate: none;
+				rotate: none;
+				scale: none;
+				transform: translate(0%, 2.6276%) translate3d(0px, 0px, 0px);
+				opacity: 1;
+				flex: auto;
+				flex-basis: 33.3333333333%;
+				width: 33.3333333333%;
+				overflow: hidden;
+				flex-wrap: wrap;
+				display: flex;
+			}
+			#wrapperThree > .content > a > img {
+				width: 100%;
 			}
 
 				#wrapperThree section > .content1 h2 {
